@@ -1,3 +1,5 @@
+<img src="./headerPic.png" alt="name banner" />
+
 ### Hi there 👋
 to be cont...
 <!--
