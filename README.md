@@ -1,3 +1,4 @@
+<div style="background-color:rgba(0, 0, 0, 0.30588); text-align:center; vertical-align: middle; padding:.50px 0;">
 <img src="./headerPic.png" alt="name banner" />
 
 ### Hi there 👋
