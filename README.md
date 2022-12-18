@@ -1,23 +1,4 @@
-<div style="background-color:rgba(0, 0, 0, 0.30588); text-align:center; vertical-align: middle; padding:.50px 0;">
 <img src="./headerPic.png" alt="name banner" />
-
-### Hi there 👋
-to be cont...
-<!--
-**ramuir/ramuir** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
 
 ## Language, Tools, Skills 🛠
 
@@ -46,6 +27,41 @@ Here are some ideas to get you started:
 <img src="https://img.shields.io/badge/jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="jira" />
 <img src="https://img.shields.io/badge/confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white" alt="confluence" />
 </div>
+
+---
+
+<p align="left">
+
+    class Person:
+
+        def __init__(self, given_name, family_name, birth_date, birth_place, employer):
+
+            self.given_name = given_name
+            self.family_name = family_name
+            self.birth_date = birth_date
+            self.location = birth_place
+            self.employer = employer
+            self.age = self._get_age()
+            self.curr_location = self._get_current_location()
+
+        def _get_age(self):
+            b_date = datetime.strptime(self.birth_date, '%m/%d/%Y')
+            my_age = ((datetime.today() - b_date).days/365)
+            return int(my_age)
+
+        def _get_current_location(self):
+            resp_ip = requests.get('https://api64.ipify.org?format=json').json()["ip"]
+            resp_local_data = requests.get(f'https://ipapi.co/{resp_ip}/json/').json()
+            city, region, country = tuple([resp_local_data.get(key) for key in ["city", 
+                                                                                "region", 
+                                                                                "country"]])
+
+            return f"{city}, {region}, {country}"
+    its_me = Person("Ryan", "Muir", "09/06/1988", "St. Louis, MO", "Lumeris")
+
+</p>
+
+---
 
 ### GitHub Stats 📈
 <div align="center">
