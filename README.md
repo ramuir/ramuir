@@ -3,7 +3,9 @@
 ## Language, Tools, Skills 🛠
 
 <div align="center">
-<img src="https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" />
+<img src="https://img.shields.io/badge/Java-Programming-orange?style=flat&logo=java" />
+<img src="https://img.shields.io/badge/C%23-Developer-blue?style=flat&logo=c-sharp" />
+<img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" />
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
 <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
@@ -35,9 +37,9 @@
 
     class Person:
 
-        def __init__(self, given_name, family_name, birth_date, birth_place, employer):
+    def__init__(self, given_name, family_name, birth_date, birth_place, employer):
 
-            self.given_name = given_name
+    self.given_name = given_name
             self.family_name = family_name
             self.birth_date = birth_date
             self.location = birth_place
@@ -45,19 +47,19 @@
             self.age = self._get_age()
             self.curr_location = self._get_current_location()
 
-        def _get_age(self):
+    def _get_age(self):
             b_date = datetime.strptime(self.birth_date, '%m/%d/%Y')
             my_age = ((datetime.today() - b_date).days/365)
             return int(my_age)
 
-        def _get_current_location(self):
+    def _get_current_location(self):
             resp_ip = requests.get('https://api64.ipify.org?format=json').json()["ip"]
             resp_local_data = requests.get(f'https://ipapi.co/{resp_ip}/json/').json()
-            city, region, country = tuple([resp_local_data.get(key) for key in ["city", 
-                                                                                "region", 
+            city, region, country = tuple([resp_local_data.get(key) for key in ["city",
+                                                                                "region",
                                                                                 "country"]])
 
-            return f"{city}, {region}, {country}"
+    return f"{city}, {region}, {country}"
     its_me = Person("Ryan", "Muir", "09/06/1988", "St. Louis, MO", "Lumeris")
 
 </p>
@@ -65,6 +67,7 @@
 ---
 
 ### GitHub Stats 📈
+
 <div align="center">
   <table width="100%">
     <tbody>
